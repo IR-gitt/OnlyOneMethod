@@ -15,8 +15,8 @@ import static com.onlyOneMethod.OperationsWithExel.readNumbersFromExcel;
 @Tag(name = "File Controller", description = "Обработка Excel файлов")
 public class Controller {
 
-    @GetMapping("/process")
-    @Operation(summary = "Вывод числа из файла с раширением exel", description = "выводит N-ое число из столбца exel файла")
+    @PostMapping("/process")
+    @Operation(summary = "Вывод числа из exel таблицы", description = "выводит N-ое число из столбца exel таблицы")
     public Serializable returnValue(@RequestParam String filePath, @RequestParam int n) {
 
         return selectNValueArray(
